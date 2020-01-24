@@ -1,0 +1,35 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name EmojiPicker
+@_exported import EmojiPicker
+import Foundation
+import Swift
+import UIKit
+extension UIColor {
+  convenience public init?(hexString: Swift.String, alpha: Swift.Float = 1.0)
+}
+public protocol EmojiPickerViewControllerDelegate : AnyObject {
+  func emojiPickerViewController(_ controller: EmojiPicker.EmojiPickerViewController, didSelect emoji: Swift.String)
+}
+@objc open class EmojiPickerViewController : UIKit.UIViewController {
+  open var sourceRect: CoreGraphics.CGRect
+  open var permittedArrowDirections: UIKit.UIPopoverArrowDirection
+  open var emojiFontSize: CoreGraphics.CGFloat
+  open var backgroundColor: UIKit.UIColor?
+  open var darkModeBackgroundColor: UIKit.UIColor?
+  open var isDarkMode: Swift.Bool
+  open var language: Swift.String?
+  open var dismissAfterSelected: Swift.Bool
+  open var size: CoreGraphics.CGSize
+  weak open var delegate: EmojiPicker.EmojiPickerViewControllerDelegate?
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+open class EmojiPicker {
+  public class var viewController: EmojiPicker.EmojiPickerViewController {
+    get
+  }
+  @objc deinit
+}

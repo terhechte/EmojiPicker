@@ -1,0 +1,11 @@
+framework module EmojiPicker {
+  umbrella header "EmojiPicker.h"
+
+  export *
+  module * { export * }
+}
+
+module EmojiPicker.Swift {
+    header "EmojiPicker-Swift.h"
+    requires objc
+}

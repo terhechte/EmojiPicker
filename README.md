@@ -1,3 +1,10 @@
+# Syntax for Creating a XCFramework:
+
+```
+xcodebuild -create-xcframework -framework /Users/terhechte/Library/Developer/Xcode/DerivedData/EmojiPicker-dmwqyaqcookfdjaquvcjpqfgqccg/Build/Products/Release-maccatalyst/EmojiPicker.framework -framework /Users/terhechte/Library/Developer/Xcode/DerivedData/EmojiPicker-dmwqyaqcookfdjaquvcjpqfgqccg/Build/Products/Release-iphonesimulator/EmojiPicker.framework -framework /Users/terhechte/Library/Developer/Xcode/DerivedData/EmojiPicker-dmwqyaqcookfdjaquvcjpqfgqccg/Build/Products/Release-iphoneos/EmojiPicker.framework -output ./EmojiPicker.xcframework
+```
+
+
 <p align="center" >
   <img src="icon.png" title="EmojiPicker logo" width='444' float=left>
 </p>
